@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#A6CEF0">
+
+        <SearchView
+            android:id="@+id/serch_View"
+            android:backgroundTint="#A6CEF0"
+            android:layout_width="@dimen/_270sdp"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:paddingTop="10dp" />
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toappbar"
+                style="@style/ThemeOverlay.MaterialComponents.Toolbar.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="Contact List"
+                app:itemIconTint="#000000"
+                app:menu="@menu/list_menu"
+                app:subtitleTextColor="@color/black"
+                app:titleTextColor="@color/black" />
+
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/ListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_43ssp"
+        android:background="@color/white" />
+
+       <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_70sdp"
+        app:backgroundTint="#3FA2F6"
+        app:fabSize="normal"
+        app:rippleColor="#1FFB07"
+        app:srcCompat="@drawable/baseline_person_add_alt_24"
+        app:tint="#000000" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:gravity="center">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:title=""
+            app:backgroundTint="#C4D7FF"
+            app:itemIconSize="@dimen/_20sdp"
+            app:itemTextColor="@color/black"
+            app:itemIconTint="#000000"
+            app:menu="@menu/navigation_menu" />
+
+    </LinearLayout>
+
+</FrameLayout>
