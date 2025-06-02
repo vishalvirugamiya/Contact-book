@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "CallDial"
+rootProject.name = "Contact Book"
 include(":app")

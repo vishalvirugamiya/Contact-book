@@ -44,6 +44,7 @@ class Cont_Details : AppCompatActivity(){
         var id =intent.getIntExtra("id",0)
 
         var db:DataBeshHelper=DataBeshHelper(this)
+
         var Datta =db.DattaUser(id)
 
 
@@ -68,8 +69,6 @@ class Cont_Details : AppCompatActivity(){
             }
             menu.show()
         }
-
-
 
         if(Datta.gender=="female")
         {

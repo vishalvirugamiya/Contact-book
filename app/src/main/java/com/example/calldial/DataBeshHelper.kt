@@ -52,8 +52,6 @@ class DataBeshHelper(context: Context) : SQLiteOpenHelper(context, "NewContact",
         }
         cursor.close()
 
-
-
         return list
     }
   fun DattaUser(Userid: Int): Contact_Data? {

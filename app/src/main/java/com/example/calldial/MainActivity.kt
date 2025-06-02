@@ -21,7 +21,7 @@ import com.example.calldial.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var  BinDing :ActivityMainBinding
+    lateinit var  BinDing : ActivityMainBinding
      lateinit var  listView: ListView
 
 
@@ -77,13 +77,6 @@ class MainActivity : AppCompatActivity() {
                 display.add(model)
             }
 
-//            if(model.name.lowercase().contains(Searchtext.lowercase()) ||model.SName.lowercase().contains(Searchtext.lowercase()) )
-//            {
-//                display.add(model)
-//            }else if(model.phone.contains(Searchtext))
-//            {
-//                display.add(model)
-//            }
         }
         AAdapter()
     }
@@ -91,10 +84,12 @@ class MainActivity : AppCompatActivity() {
     private fun newContact() {
 
         var db:DataBeshHelper=DataBeshHelper(this)
-         list =db.allContactData()
+         list = db.allContactData()
 
-        display = ArrayList<Contact_Data>()
+        display = ArrayList()
         display.addAll(list)
+
+
 
         registerForContextMenu(BinDing.ListView)
 
@@ -103,6 +98,8 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("id",list.get(position).id)
             startActivity(intent)
         }
+
+        AAdapter()
 
     }
 
@@ -130,7 +127,6 @@ private fun AAdapter(){
         }
         return super.onContextItemSelected(item)
     }
-
 
     private fun deletedata(id:Int) {
         var db :DataBeshHelper = DataBeshHelper(this)

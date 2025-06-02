@@ -1,7 +1,5 @@
 package com.example.calldial
 
-import android.content.Intent
-import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
@@ -29,6 +27,7 @@ class Contact_Adapter(var mainActivity: MainActivity, var list: ArrayList<Contac
 
         binding.AddContact.text=datta.name +" "+ datta.SName
         binding.Number.text=datta.phone
+
 
         if(datta.gender=="female")
         {

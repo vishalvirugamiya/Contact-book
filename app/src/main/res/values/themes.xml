@@ -6,6 +6,7 @@
         <item name="colorPrimary">#D0000000</item>
         <item name="colorPrimaryDark">#D0000000</item>
         <item name="android:navigationBarColor">#D0000000</item>
+
     </style>
 
     <style name="Theme.CallDial" parent="Base.Theme.CallDial" />

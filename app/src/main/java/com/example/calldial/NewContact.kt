@@ -3,6 +3,7 @@ package com.example.calldial
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -23,6 +24,7 @@ class NewContact : AppCompatActivity() {
 
         binDing = ActivityNewContactBinding.inflate(layoutInflater)
         setContentView(binDing.root)
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -74,15 +76,6 @@ class NewContact : AppCompatActivity() {
 
             val NumberPattern = Regex("[0-9]{10}")
             val emailPattern = Regex("[a-z]+[a-z0-9]+@[gmail]+\\.+[com]+")
-
-
-//            if (email.matches(emailPattern)) {
-//            //  Toast.makeText(getApplicationContext(), "valid email address", Toast.LENGTH_SHORT) .show();
-//
-//            } else {
-//              //  Toast.makeText(getApplicationContext(), "Invalid email address", Toast.LENGTH_SHORT).show();
-//            }
-
 
             if(email.matches(emailPattern) && Name!="" && number.matches(NumberPattern) && address!="" && birth!="" )
             {

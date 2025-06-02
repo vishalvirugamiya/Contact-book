@@ -13,9 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CallDial"
         tools:targetApi="31" >
-        <activity
-            android:name=".menu_page"
-            android:exported="false" />
+
         <activity
             android:name=".Edit_page"
             android:exported="false" />
